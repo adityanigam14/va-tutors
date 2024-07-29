@@ -10,8 +10,18 @@ export default function Navbar() {
       </Link>
       <ul className="flex space-x-4">
         <li>
+          <Link to="/services" className="text-white text-xl">
+            Services
+          </Link>
+        </li>
+        <li>
           <Link to="/team" className="text-white text-xl">
             Our Team
+          </Link>
+        </li>
+        <li>
+          <Link to="/partners" className="text-white text-xl">
+            Partners
           </Link>
         </li>
         <li>

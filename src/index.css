@@ -4,6 +4,7 @@
 @import 'tailwindcss/utilities';
 
 body {
+  background-color: #bfdbfe;
   margin: 0;
   font-family: 'Kanit', sans-serif;
   -webkit-font-smoothing: antialiased;
