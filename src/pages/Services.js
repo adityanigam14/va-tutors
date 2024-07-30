@@ -1,8 +1,10 @@
+import collegesImage from '../colleges.png';
+
 export default function Services() {
     return (
-        <div className="flex flex-col my-8">
+        <div className="flex flex-col my-8 w-screen">
             <h1 className="text-6xl font-bold text-center mb-8 mt-4">Our Services</h1>
-            <div className="bg-blue-300 w-screen h-84 flex justify-center items-center">
+            <div className="bg-blue-300 h-84 flex justify-center items-center">
                 <div className="text-center p-10 max-w-7xl">
                     <h2 className="text-3xl font-bold text-center">1 on 1 Tutoring</h2>
                     <p className="mt-4 text-lg text-center">
@@ -36,10 +38,35 @@ export default function Services() {
                     </div>
                 </div>
             </div>
-            <div className="bg-cyan-800 w-screen h-28 flex justify-center items-center">
-                <h2 className="text-center text-bold text-white text-3xl p-10">By the Numbers</h2>
+            <div className="bg-cyan-800 h-28 flex justify-center items-center">
+                <h2 className="text-center text-bold text-white text-3xl p-10">College Counseling</h2>
+            </div>
+            <div className="flex flex-col items-center py-8 bg-blue-200">
+                <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 p-10">
+                    <div>
+                        <p className="text-lg mb-4">
+                            As of 2023, VA Tutors provides personalized, effective, and accessible college admission guidance to students from all backgrounds. We offer assistance with writing personal and supplemental essays, compiling resumes, searching for colleges, reviewing applications, and helping with scholarship procedures.
+                        </p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEoWlAONi_K1tMU_bA2cvy23rLCaozs1InxYlmQ2Sbi2H4Eg/viewform" 
+                            target="_blank" rel="noopener noreferrer">
+                            <button className="bg-white text-blue-500 w-full py-2 text-lg rounded-lg shadow-md hover:bg-gray-100 transition duration-500 mb-4">
+                                Request a College Advisor
+                            </button>
+                        </a>
+                        <p className="text-lg mb-4">
+                            We have also recently partnered with an LLM platform, Skylow, that allows users to instantly communicate with students from their dream schools. While you wait to be paired with one of our college application advisors, this platform has free and premium features that will propel you in your application journey.
+                        </p>
+                        <a href="https://skylow.ai/" target="_blank" rel="noopener noreferrer">
+                            <button className="bg-white text-blue-500 w-full py-2 text-lg rounded-lg shadow-md hover:bg-gray-100 transition duration-500 mb-4">
+                                Access the AI Tool
+                            </button>
+                        </a>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <img src={collegesImage} alt="Colleges" className="w-full h-auto rounded-lg shadow-md" />
+                    </div>
+                </div>
             </div>
         </div>
     );
 }
-
