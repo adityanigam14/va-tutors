@@ -4,7 +4,7 @@ const importAll = (r) => r.keys().map(r);
 const imagesNPC = importAll(require.context('../imagery/partnersNPC', false, /\.(png|jpe?g|svg)$/));
 const imagesASPH = importAll(require.context('../imagery/partnersASPH', false, /\.(png|jpe?g|svg)$/));
 
-export default function Services() {
+export default function Partners() {
     const titlesNPC = [
         "Cary Teen Council",
         "EdMotion",
@@ -27,7 +27,7 @@ export default function Services() {
     ];
 
     const descriptionsNPC = [
-        "Cary Teen Council’s mission is to empower youth and enrich communities through teen-led volunteerism. This organization has 800+ active Cary teen volunteers who demonstrate leadership and a heart of service by assisting at local events, attending civic and leadership-building forums, and host their own sponsored community events.",
+        "Cary Teen Council’s mission is to empower youth and enrich communities through teen-led volunteerism. This organization has 800+ active Cary teen volunteers who demonstrate leadership and a heart of service by assisting at local events, attending civic and leadership-building forums, and hosting their own sponsored community events.",
         "EdMotion's SMALLab is an advanced 3D mixed reality classroom that fosters curiosity, teamwork, and discovery through whole-body movements. Supported by grants from the National Science Foundation, the Bill and Melinda Gates Foundation, and Intel, SMALLab enhances student understanding by 86%, engagement by 6.7X, and teacher performance by 33%.",
         "Givefinity allows volunteer organizations to manage their programs effortlessly. Givefinity simplifies your administrative work, accelerates your daily operations, and vividly demonstrates your group’s positive impact. It generates detailed reporting on the hours of each member and a clear view of the impact your organization is making.",
         "Key Club, the oldest and largest high school service program, is a student-led organization that fosters leadership through community service. With about 250,000 members across 5,000 clubs in 30 countries, Key Club members enhance their schools and communities. VA Tutors has partnered with three Key Clubs in the RTP area: Panther Creek, Green Hope, and Apex Friendship.",
@@ -39,7 +39,7 @@ export default function Services() {
 
     const descriptionsASPH = [
         "In April 2019, All About Melanated Excellence CEC began as a tutoring service for children ages 5-12 in Southeast Raleigh. As demand grew, parents requested additional services, highlighting a need for quality childcare in the area. In response, the organization planned to expand into childcare. Despite pandemic-related challenges and educator burnout, the opportunity arose to open a dedicated childcare center in 2021, and the All About M.E. CEC. was created.",
-        "Fayetteville Street School is a traditional K-5 school that provides a 1:20 teacher/student ratio. Teachers engage students in varied and innovative instructional techniques and strategies. Parents are an integral part of the learning process. The school views parental involvement as a critical aspect of the many educational initiatives we have undertaken with our students.",
+        "Fayetteville Street School is a traditional K-5 school that boasts a 1:20 teacher/student ratio. Teachers engage students in varied and innovative instructional techniques and strategies. Parents are an integral part of the learning process. The school views parental involvement as a critical aspect of the many educational initiatives we have undertaken with our students.",
         "iLead Kids is a versatile organization specializing in summer camps, track-out camps, and half-day before and after-school care for pre-K students. Their comprehensive programs encompass STEAM development, team building, homework assistance, academic enrichment, and leadership workshops, which ensure a well-rounded and enriching experience for young learners.",
         "P.O.O.F is a double acronym that stands for Planning Our Own Future/Funerals. It is an entrepreneurship Program that provides Durham teens ages 13-17 with the opportunity to learn the skills necessary to become an entrepreneur. They emphasize teaching the building blocks of becoming an entrepreneur, along with preparing for life finances such as opening bank accounts and obtaining insurance.",
         "Purpose Learning Lab empowers youth through enrichment and wellness programs that foster confidence, innovation, and academic growth. They offer pathways for minority students to explore STEM and Integrated Arts careers through labs, in-class wellness workshops, after-school programs, private tutoring, summer camps, mentorship, entrepreneurship, substance abuse education, and access to mental health services.",
@@ -70,7 +70,7 @@ export default function Services() {
 
     return (
         <div className="flex flex-col my-8 w-screen">
-            <h1 className="text-6xl font-bold text-center mb-8 mt-4">Partnered Organizations</h1>
+            <h1 className="text-5xl font-bold text-center mb-8 mt-4">Partnered Organizations</h1>
             <div className="bg-blue-300 h-84 flex justify-center items-center">
                 <div className="text-center p-10 max-w-7xl">
                     <p className="text-lg text-center">
@@ -115,7 +115,7 @@ export default function Services() {
                 </div>
             </div>
             <div className="bg-cyan-800 h-28 flex justify-center items-center">
-                <h2 className="text-center text-bold text-white text-3xl p-10">Partnered Schools and Organizations</h2>
+                <h2 className="text-center text-bold text-white text-3xl p-10">Partnered After-School Programs and Hospitals</h2>
             </div>
             <div className="p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

@@ -8,7 +8,7 @@ export default function Home() {
 
     return (
         <div className="flex flex-col my-8">
-            <h1 className="text-6xl font-bold text-center mb-8 mt-4">VA Tutors</h1>
+            <h1 className="text-5xl font-bold text-center mb-8 mt-4">VA Tutors</h1>
             <div className="bg-blue-300 w-screen h-84">
                 <div className="text-center grid grid-cols-2 gap-4 p-10 max-w-7xl mx-auto">
                     <div className="flex flex-col items-center justify-center p-4">
