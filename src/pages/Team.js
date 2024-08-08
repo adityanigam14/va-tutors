@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Team() {
     const importAll = (r) => r.keys().map(r);
-    const images = importAll(require.context('../pfps/tutors', false, /\.(png|jpe?g|svg)$/));
+    const images = importAll(require.context('../imagery/tutors', false, /\.(png|jpe?g|svg)$/));
 
     return (
         <div className="bg-blue-200 flex flex-col text-center h-screen mb-8">

@@ -1,4 +1,4 @@
-import collegesImage from '../colleges.png';
+import collegesImage from '../imagery/misc/colleges.png';
 
 export default function Services() {
     return (
