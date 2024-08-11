@@ -69,10 +69,10 @@ export default function Partners() {
     ];
 
     return (
-        <div className="flex flex-col my-8 w-screen">
+        <div className="flex flex-col my-8 w-full overflow-x-hidden">
             <h1 className="text-5xl font-bold text-center mb-8 mt-4">Partnered Organizations</h1>
             <div className="bg-blue-300 h-84 flex justify-center items-center">
-                <div className="text-center p-10 max-w-7xl">
+                <div className="text-center p-10 max-w-7xl mx-auto">
                     <p className="text-lg text-center">
                         VA Tutors has partnered with many organizations to help serve the community and provide the best for our students.
                     </p>
@@ -92,24 +92,20 @@ export default function Partners() {
                 <h2 className="text-center text-bold text-white text-3xl p-10">Partnered Non-Profits and Companies</h2>
             </div>
             <div className="p-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto">
                     {imagesNPC.map((src, index) => (
                         <div key={index} className="flex flex-col bg-white p-6 rounded-lg shadow-md h-full">
-                            <a href={linksNPC[index]} target="_blank" rel="noopener noreferrer">
+                            <a href={linksNPC[index]} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                                 <img 
                                     src={src}
-                                    alt={`${titlesNPC[index]}`}
-                                    className="rounded-lg w-2/3 mx-auto h-72"
+                                    alt={`${titlesNPC[index]} Logo`}
+                                    className="rounded-lg w-60 mx-auto h-60 mb-4" 
                                 />
                             </a>
-                            <div className="mt-4 flex flex-col items-center">
-                                <h3 className="text-xl font-bold">
-                                    <a href={linksNPC[index]} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
-                                        {titlesNPC[index] || "No title available"}
-                                    </a>
-                                </h3>
-                                <p className="mt-2 text-gray-700">{descriptionsNPC[index]}</p>
-                            </div>
+                            <a href={linksNPC[index]} target="_blank" rel="noopener noreferrer">
+                                <h3 className="text-xl font-semibold text-center text-blue-500 underline mb-2">{titlesNPC[index]}</h3>
+                            </a>
+                            <p className="text-center">{descriptionsNPC[index]}</p>
                         </div>
                     ))}
                 </div>
@@ -118,24 +114,20 @@ export default function Partners() {
                 <h2 className="text-center text-bold text-white text-3xl p-10">Partnered After-School Programs and Hospitals</h2>
             </div>
             <div className="p-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto">
                     {imagesASPH.map((src, index) => (
                         <div key={index} className="flex flex-col bg-white p-6 rounded-lg shadow-md h-full">
-                            <a href={linksASPH[index]} target="_blank" rel="noopener noreferrer">
+                            <a href={linksASPH[index]} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                                 <img 
                                     src={src}
-                                    alt={`${titlesASPH[index]}`}
-                                    className="rounded-lg w-2/3 mx-auto h-72"
+                                    alt={`${titlesASPH[index]} Logo`}
+                                    className="rounded-lg w-60 mx-auto h-60 mb-4"
                                 />
                             </a>
-                            <div className="mt-4 flex flex-col items-center">
-                                <h3 className="text-xl font-bold">
-                                    <a href={linksASPH[index]} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">
-                                        {titlesASPH[index] || "No title available"}
-                                    </a>
-                                </h3>
-                                <p className="mt-2 text-gray-700">{descriptionsASPH[index]}</p>
-                            </div>
+                            <a href={linksASPH[index]} target="_blank" rel="noopener noreferrer">
+                                <h3 className="text-xl font-semibold text-center text-blue-500 underline mb-2">{titlesASPH[index]}</h3>
+                            </a>
+                            <p className="text-center">{descriptionsASPH[index]}</p>
                         </div>
                     ))}
                 </div>

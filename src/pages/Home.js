@@ -1,6 +1,9 @@
+import React from 'react';
+import CountUp from 'react-countup';
+
 export default function Home() {
     const stats = [
-        { number: '15+', text: 'active students' },
+        { number: '20+', text: 'active students' },
         { number: '1200+', text: 'hours tutored' },
         { number: '16', text: 'partnered organizations' },
         { number: '3', text: 'recognitions received' },
@@ -46,7 +49,16 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center m-8">
                 {stats.map((stat, index) => (
                     <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <div className="text-4xl font-bold">{stat.number}</div>
+                        <div className="text-4xl font-bold">
+                            <CountUp
+                                start={0}
+                                end={parseInt(stat.number.replace('+', ''))}
+                                duration={2.5}
+                                separator=","
+                                preserveValue
+                                suffix={stat.number.includes('+') ? '+' : ''}
+                            />
+                        </div>
                         <div className="text-lg mt-2 text-gray-600">{stat.text}</div>
                     </div>
                 ))}
