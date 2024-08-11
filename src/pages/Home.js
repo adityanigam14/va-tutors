@@ -5,7 +5,7 @@ export default function Home() {
     const stats = [
         { number: '20+', text: 'active students' },
         { number: '1200+', text: 'hours tutored' },
-        { number: '16', text: 'partnered organizations' },
+        { number: '15', text: 'partnered organizations' },
         { number: '3', text: 'recognitions received' },
     ];
 
