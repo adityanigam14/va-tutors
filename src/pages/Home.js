@@ -73,7 +73,7 @@ export default function Home() {
             <div className="bg-cyan-800 h-28">
                 <h2 className="text-center text-bold text-white text-3xl p-10">By the Numbers</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 text-center m-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 text-center my-10 mx-6">
                 {stats.map((stat, index) => (
                     <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
                         <div className="text-4xl font-bold">
