@@ -3,9 +3,9 @@ import logo from './imagery/misc/logo.png';
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center p-5 bg-blue-400 w-screen h-20 fixed z-50">
+    <nav className="flex justify-start items-center p-5 bg-blue-400 w-screen h-20 fixed">
       <Link to="/" className="flex items-center text-white text-xl mr-5">
-        <img src={logo} alt="Logo" className="h-16 w-16" /> 
+        <img src={logo} alt="Logo" className="mr-2 mb-2 h-16 w-16" /> 
         <span className="hidden sm:block text-xl">Home</span>
       </Link>
       <ul className="flex space-x-4">
