@@ -16,11 +16,18 @@ export default function Team() {
 
     const namesTutors = [
         'Aashvi Patel',
+        'Advait Cheruku',
         'Agata Tulchinskaya',
         'Anay Ravindra',
         'Anice Jackson',
+        'Bhuwan Bashyal',
+        'Chandana Herlekar',
         'Gianna Gupta',
+        'Hasini Janakanoori',
+        'Himank Kadakia',
         'Kriya Patel',
+        'Nevinka Lenora',
+        'Prabin Adhikari',
         'Pranjal Rawat',
         'Ridhima Mahajan',
         'Sejal Seavey',
@@ -48,11 +55,18 @@ export default function Team() {
 
     const biosTutors = [
         "My name is Aashvi Patel and I am a sophomore at the Wake Early College of Information and Biotechnologies. I have experience teaching kids, and I strive to lead them to reaching higher test scores. I've helped a few children raise their scores.",
-        "My name is Agata Tulchinskaya and I am a rising freshman at NC State University. I love helping kids, and VA Tutors is a perfect way of doing that. I believe that teaching can help kids succeed in the future and propel themselves forward.",
+        "My name is Advait Cheruku and I’m a sophomore at Panther Creek High School, I joined VA Tutors because I needed some volunteer hours and a professional environment around me. Some of my interests and hobbies are playing and watching soccer. ",
+        "My name is Agata Tulchinskaya and I am a freshman at NC State University. I love helping kids, and VA Tutors is a perfect way of doing that. I believe that teaching can help kids succeed in the future and propel themselves forward.",
         "My name is Anay Ravindra, and I am a senior at Panther Creek High School. I joined VA Tutors because I wanted to help others who faced similar challenges in the courses I have already taken, and hopefully make their learning process easier. I hope to make an impact on my students and help them take what they learn from me into the classroom to succeed.",
         "My name is Anice, I’m a junior. So far, my experience as a VA Tutor is pleasant! My first session was the sweetest first grader. She is an incredibly gifted little girl and I had fun teaching her. I am anticipating my next session with a positive attitude.",
+        "Hi, my name is Bhuwan Bashyal, and I am a freshman at Panther Creek High School. I love reading books in my free time. I joined VA Tutors because I can share my knowledge with others and make a difference in the community. I will make sure you are comfortable with your upcoming class!",
+        "My name is Chandana Herlekar, and I am a sophomore at Cary High School. I am particularly interested in biology, history, and literature, although I enjoy tutoring other subjects as well! I joined VA tutors as I love the idea of passing on my knowledge from previous classes and using it to mentor younger students.",
         "My name is Gianna, and I am a sophomore at Panther Creek High School, and I really like sports, I love to read, and I love music, and play piano. I have really liked tutoring in VA tutors because it’s given me an opportunity to help kids and be there to help them.",
+        "Hi, I’m Hasini Janakanoori, and I am a senior at Panther Creek High School. Being a part of this organization has been one of the best decisions I’ve made! Outside of school, I love to bake and spend time with friends and family. I’m looking forward to growing the organization and helping more students in the upcoming year!",
+        "My name is Himank Kadakia and am a freshman at Panther Creek High School. I am interested in teaching and volunteering through tutoring because I like to watch others succeed. Some of my hobbies include playing sports and hanging out with my friends.",
         "My name is Kriya Patel, I'm a senior at Panther Creek High School and my favorite hobbies include dancing, painting, and photography. I haven’t had much experience with VA Tutors specifically but I have tutored kids in the past.",
+        "My name is Nevinka Lenora, and I am a sophomore at Thales Academy. Some of my passions are psychology and teaching, and I love applying these interests when I mentor students at VA Tutors. In my free time, I enjoy ice skating and reading.",
+        "My name is Prabin Adhikari, and I am a sophomore in Panther Creek High School. I joined VA Tutors because I enjoy teaching younger kids, as it makes a difference in the community and I can grow as a mentor. In my free time, I enjoy spending time with my friends and playing sports.",
         "My name is Pranjal Rawat, and I am a senior at Willow Spring High School. I like to listen to diverse genres of music and play cricket in my free time. I’ve been teaching my friends at school by creating a friendly and productive environment. Now, I would like to help the whole community with the same passion.",
         "My name is Ridhima Mahajan, and I am a junior at Panther Creek High School. Some things I like include baking, dancing, and music, and my favorite subjects are math and science. I believe having a positive mindset toward these subjects can make them easier and more enjoyable for students, which is why I began tutoring. My experience with everyone has been great so far, and I hope it is the same for you!",
         "My name is Sejal, and graduated from Cary High School. I have always loved school, but I understand that for some students, it may be difficult to get through. I think it's best to have someone around the same age as you to be your mentor as you can relate and understand better that way. I have a strong interest in teaching and want to help struggling students make the most of their school experience!",
@@ -104,7 +118,7 @@ export default function Team() {
                 </div>
             </div>
             <div className="bg-cyan-800 h-28 flex justify-center items-center">
-                <h2 className="text-center text-bold text-white text-3xl p-10">Tutors</h2>
+                <h2 className="text-center text-bold text-white text-3xl p-10">Current Tutors</h2>
             </div>
             <div className="p-8 overflow-x-hidden">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto">
