@@ -73,16 +73,16 @@ export default function Partners() {
             <h1 className="text-5xl font-bold text-center mb-8 mt-4">Partnered Organizations</h1>
             <div className="bg-blue-300 h-84 flex justify-center items-center">
                 <div className="text-center p-10 max-w-7xl mx-auto">
-                    <p className="text-lg text-center">
+                    <p className="text-lg text-center lg:w-2/5 md:w-4/5 sm:w-full mx-auto">
                         VA Tutors has partnered with many organizations to help serve the community and provide the best for our students.
                     </p>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScfX_79mqaSiYzR-Wr2vpXv_UGkHplhl06xSonLSBGFcloEjw/viewform" 
                         target="_blank" rel="noopener noreferrer" className="flex-1">
-                        <button className="bg-white text-blue-500 lg:w-1/3 md:w-1/2 sm:w-full py-2 px-2 mt-4 text-lg rounded-lg shadow-md hover:bg-gray-100 transition duration-500">
+                        <button className="bg-white text-blue-500 w-2/3 md:w-1/2 lg:w-1/3 py-2 px-2 mt-4 text-lg rounded-lg shadow-md hover:bg-gray-100 transition duration-500">
                             Sign up to become a partner!
                         </button>
                     </a>
-                    <p className="mt-6 text-lg text-center w-1/2 mx-auto">
+                    <p className="mt-6 text-lg text-center lg:w-2/5 md:w-4/5 sm:w-full mx-auto">
                         We will contact you via email as soon as possible to revise and detail the partnership. We can't wait to work with you and better 
                         the Research Triangle Park community together!
                     </p>
