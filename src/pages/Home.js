@@ -91,7 +91,7 @@ export default function Home() {
                 ))}
             </div>  
             <div className="bg-cyan-800 h-28">
-                <h2 className="text-center text-bold text-white text-3xl p-10">Awards and Recognitions</h2>
+                <h2 className="text-center text-bold text-white text-3xl p-10">Awards Received</h2>
             </div>
             <div className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
                 {imagesAwards.map((src, index) => (
