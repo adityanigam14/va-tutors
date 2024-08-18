@@ -5,11 +5,11 @@ export default function Navbar() {
   return (
     <nav className="flex justify-start items-center p-5 bg-blue-400 w-screen h-20 fixed lg:text-xl md:text-lg text-white">
       <Link to="/" className="flex items-center">
-        <img src={logo} alt="Logo" className="mr-1 mb-2 h-16 w-16"/> 
+        <img src={logo} alt="Logo" className="mr-3 mb-2 h-16 w-16"/> 
       </Link>
       <ul className="flex space-x-3">
         <li>
-          <Link to="/">
+          <Link to="/" className="hidden sm:block">
             Home
           </Link>
         </li>
