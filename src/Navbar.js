@@ -3,29 +3,33 @@ import logo from './imagery/misc/logo.png';
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-start items-center p-5 bg-blue-400 w-screen h-20 fixed">
-      <Link to="/" className="flex items-center text-white text-xl mr-5">
-        <img src={logo} alt="Logo" className="mr-2 mb-2 h-16 w-16" /> 
-        <span className="hidden sm:block text-xl">Home</span>
+    <nav className="flex justify-start items-center p-5 bg-blue-400 w-screen h-20 fixed lg:text-xl md:text-lg text-white">
+      <Link to="/" className="flex items-center">
+        <img src={logo} alt="Logo" className="mr-3 mb-2 h-16 w-16"/> 
       </Link>
-      <ul className="flex space-x-4">
+      <ul className="flex space-x-3">
         <li>
-          <Link to="/services" className="text-white text-xl">
+          <Link to="/" className="hidden sm:block">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/services">
             Services
           </Link>
         </li>
         <li>
-          <Link to="/team" className="text-white text-xl">
-            Our Team
+          <Link to="/team">
+            Team
           </Link>
         </li>
         <li>
-          <Link to="/partners" className="text-white text-xl">
+          <Link to="/partners">
             Partners
           </Link>
         </li>
         <li>
-          <Link to="/feedback" className="text-white text-xl">
+          <Link to="/feedback">
             Feedback
           </Link>
         </li>
