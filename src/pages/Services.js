@@ -54,7 +54,7 @@ export default function Services() {
                             </button>
                         </a>
                         <p className="text-lg mb-4">
-                            We have also recently partnered with an LLM platform, Skylow, that allows users to instantly communicate with students from their dream schools. While you wait to be paired with one of our college application advisors, this platform has free and premium features that will propel you in your application journey.
+                            We have also recently partnered with an LLM platform, Skylow, that allows users to instantly communicate with students from their dream schools. While you wait to be paired with one of our college application advisors, Skylow has free and premium features that will propel you in your application journey.
                         </p>
                         <a href="https://skylow.ai/" target="_blank" rel="noopener noreferrer">
                             <button className="bg-white text-blue-500 w-full py-2 text-lg rounded-lg shadow-md hover:bg-gray-100 transition duration-500 mb-4">
