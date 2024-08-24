@@ -1,16 +1,25 @@
-import Navbar from "./Navbar"
-import Home from "./pages/Home"
-import Services from "./pages/Services"
-import Team from "./pages/Team"
-import Partners from "./pages/Partners"
-import Feedback from "./pages/Feedback"
-import { Route, Routes } from "react-router-dom"
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Team from "./pages/Team";
+import Partners from "./pages/Partners";
+import Feedback from "./pages/Feedback";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [location.pathname]);
+
   return (
-    <div className="flex">
+    <div className="flex flex-col items-center">
       <Navbar />
-      <div className="pt-16 flex flex-col items-center w-screen">
+      <div className="pt-16 w-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
@@ -19,8 +28,9 @@ function App() {
           <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
