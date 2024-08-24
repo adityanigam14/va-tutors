@@ -4,7 +4,7 @@ export default function Services() {
     return (
         <div className="flex flex-col my-8">
             <h1 className="text-5xl font-bold text-center mb-8 mt-4">Our Services</h1>
-            <div className="bg-blue-300 h-84 flex justify-center items-center w-screen">
+            <div className="bg-blue-300 h-84 flex justify-center items-center">
                 <div className="text-center p-10 max-w-7xl">
                     <h2 className="text-3xl font-bold text-center">1 on 1 Tutoring</h2>
                     <p className="mt-4 text-lg text-center">

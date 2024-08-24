@@ -1,5 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const importAll = (r) => r.keys().map(r);
 const imagesAwards = importAll(require.context('../imagery/awards', false, /\.(png|jpe?g|svg)$/));
@@ -9,7 +10,7 @@ export default function Home() {
     const stats = [
         { number: '200+', text: 'students tutored' },
         { number: '1200+', text: 'hours tutored' },
-        { number: '16', text: 'partnered organizations' },
+        { number: '15', text: 'partnered organizations' },
     ];
 
     const titlesAwards = [
@@ -36,6 +37,28 @@ export default function Home() {
         "Vraj Parikh, the founder of VA Tutors, was invited to be a guest on the Knowledge Entrepreneurs Show by EdisonOS. During this podcast, which explores the world of knowledge commerce through the perspectives of leading entrepreneurs, Vraj shared his experiences in education, discussed his journey with VA Tutors, and gave his opinion on standardized tests.",
     ];
 
+    const StatCard = ({ stat }) => {
+        const { ref, inView } = useInView({ triggerOnce: true });
+
+        return (
+            <div ref={ref} className="bg-gray-100 p-6 rounded-lg shadow-md">
+                <div className="text-4xl font-bold">
+                    {inView && (
+                        <CountUp
+                            start={0}
+                            end={parseInt(stat.number.replace('+', ''))}
+                            duration={2.5}
+                            separator=","
+                            preserveValue
+                            suffix={stat.number.includes('+') ? '+' : ''}
+                        />
+                    )}
+                </div>
+                <div className="text-lg mt-2 text-gray-600">{stat.text}</div>
+            </div>
+        );
+    };
+
     return (
         <div className="flex flex-col my-8 w-full overflow-x-hidden">
             <h1 className="text-5xl font-bold text-center mb-8 mt-4">VA Tutors</h1>
@@ -43,7 +66,7 @@ export default function Home() {
                 <div className="text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-10 max-w-7xl mx-auto">
                     <div className="flex flex-col items-center justify-center p-4">
                         <h2 className="text-3xl font-bold">Learning Together, Growing Together</h2>
-                        <p className="text-lg mt-4">VA Tutors is a free tutoring organization from North Carolina aimed to help students worldwide. We provide various services including K-12 tutoring, SAT and ACT preparation, and college counseling. Run by high-achieving students, we strive to provide everyone the opportunity to learn and succeed.</p>
+                        <p className="text-lg mt-4">VA Tutors is a free tutoring organization from North Carolina aimed to mentor students worldwide. We provide a multitude of services including K-12 tutoring, SAT and ACT preparation, and college counseling. Run by high-achieving students, we strive to provide everyone the opportunity to learn and succeed.</p>
                     </div>
                     <div className="flex flex-col items-center justify-center space-y-4 p-4">
                         <p className="font-bold text-xl">Ready to join our team? Click below to apply to be a tutor!</p>
@@ -75,19 +98,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 text-center my-10 mx-6">
                 {stats.map((stat, index) => (
-                    <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <div className="text-4xl font-bold">
-                            <CountUp
-                                start={0}
-                                end={parseInt(stat.number.replace('+', ''))}
-                                duration={2.5}
-                                separator=","
-                                preserveValue
-                                suffix={stat.number.includes('+') ? '+' : ''}
-                            />
-                        </div>
-                        <div className="text-lg mt-2 text-gray-600">{stat.text}</div>
-                    </div>
+                    <StatCard key={index} stat={stat} />
                 ))}
             </div>  
             <div className="bg-cyan-800 h-28">
