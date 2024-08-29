@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase.js'; 
 
-const Team = () => {
+export default function Team() {
   const [boardMembers, setBoardMembers] = useState(Array(6).fill({ name: 'Loading...'}));
   const [tutors, setTutors] = useState(Array(6).fill({ name: 'Loading...'}));
 
@@ -91,5 +91,3 @@ const Team = () => {
     </div>
   );
 };
-
-export default Team;
