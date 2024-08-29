@@ -1,40 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase.js'; 
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
-const importAll = (r) => r.keys().map(r);
-const imagesAwards = importAll(require.context('../imagery/awards', false, /\.(png|jpe?g|svg)$/));
-const imagesEngagement = importAll(require.context('../imagery/engagement', false, /\.(png|jpe?g|svg)$/));
-
 export default function Home() {
+    const [awards, setAwards] = useState([]);
+    const [engagement, setEngagement] = useState([]);
+
+    useEffect(() => {
+        const fetchAwards = async () => {
+          const awardsCollection = collection(db, 'awards');
+          const awardsSnapshot = await getDocs(awardsCollection);
+          const awardsList = awardsSnapshot.docs.map(doc => doc.data());
+          setAwards(awardsList);
+        };
+    
+        const fetchEngagement = async () => {
+          const engagementCollection = collection(db, 'engagement');
+          const engagementSnapshot = await getDocs(engagementCollection);
+          const engagementList = engagementSnapshot.docs.map(doc => doc.data());
+          setEngagement(engagementList);
+        };
+    
+        fetchAwards();
+        fetchEngagement();
+      }, []);
+
     const stats = [
         { number: '200+', text: 'students tutored' },
         { number: '1200+', text: 'hours tutored' },
         { number: '15', text: 'partnered organizations' },
-    ];
-
-    const titlesAwards = [
-        "2022 RTP Rotary Club Game Changer Award",
-        "2023 RTP Rotary Hero Award",
-        "Certificate of Acknowledgement of Exceptional Service",
-    ];
-
-    const titlesEngagement = [
-        "Innovate Carolina Startup Connect",
-        "Chipotle Benefit Night",
-        "Episode 176 | Vraj Parikh | VA Tutors | The Knowledge Entrepreneurs Show",
-    ];
-
-    const descriptionsAwards = [
-        "1 of 4 organizations/individuals chosen for performing outstanding community service in the RTP Area.",
-        "1 of 5 organizations/individuals chosen for expressing continuous dedication to positively influence today's youth.",
-        "1 of 8 organizations awarded by Representative Kanika Brown for exceptional service to North Carolina House District 71 and the Triad.",
-    ];
-
-    const descriptionsEngagement = [
-        "Carolina Startup Connect offered students and startups two meet-and-greet events. These events gave students learning and career development opportunities with high-growth startup companies and social ventures in the Research Triangle region. Both sessions brought students together with local companies and nonprofits that were eager to work with talented students through internship and job opportunities.",
-        "This fundraiser was a community-oriented event aimed at enhancing our organization by integrating more effective technological tools for our tutors. These upgrades enabled us to offer even more effective and dynamic tutoring services. Additionally, the funds raised will support our article production costs on Apple News and Google News, which will allow our organization to be further publicized.",
-        "Vraj Parikh, the founder of VA Tutors, was invited to be a guest on the Knowledge Entrepreneurs Show by EdisonOS. During this podcast, which explores the world of knowledge commerce through the perspectives of leading entrepreneurs, Vraj shared his experiences in education, discussed his journey with VA Tutors, and gave his opinion on standardized tests.",
     ];
 
     const StatCard = ({ stat }) => {
@@ -105,15 +101,15 @@ export default function Home() {
                 <h2 className="text-center text-bold text-white text-3xl p-10">Awards Received</h2>
             </div>
             <div className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
-                {imagesAwards.map((src, index) => (
+                {awards.map((award, index) => (
                     <div key={index} className="flex flex-col bg-white p-6 rounded-lg shadow-md h-full">
                         <img 
-                            src={src}
-                            alt={`${titlesAwards[index]} Logo`}
+                            src={award.imageURL}
+                            alt={award.name}
                             className="rounded-lg w-80 mx-auto h-60 mb-4"
                         />
-                        <h3 className="text-xl font-semibold text-center text-blue-500 underline mb-2">{titlesAwards[index]}</h3>
-                        <p className="text-center">{descriptionsAwards[index]}</p>
+                        <h3 className="text-xl font-semibold text-center text-blue-500 underline mb-2">{award.name}</h3>
+                        <p className="text-center">{award.bio}</p>
                     </div>
                 ))}
             </div>
@@ -121,15 +117,15 @@ export default function Home() {
                 <h2 className="text-center text-bold text-white text-3xl p-10">Public Engagement</h2>
             </div>
             <div className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
-                {imagesEngagement.map((src, index) => (
+                {engagement.map((event, index) => (
                     <div key={index} className="flex flex-col bg-white p-6 rounded-lg shadow-md h-full">
                         <img 
-                            src={src}
-                            alt={`${titlesEngagement[index]} Logo`}
+                            src={event.imageURL}
+                            alt={event.name}
                             className="rounded-lg w-60 mx-auto h-60 mb-4"
                         />
-                        <h3 className="text-xl font-semibold text-center text-blue-500 underline mb-2">{titlesEngagement[index]}</h3>
-                        <p className="text-center">{descriptionsEngagement[index]}</p>
+                        <h3 className="text-xl font-semibold text-center text-blue-500 underline mb-2">{event.name}</h3>
+                        <p className="text-center">{event.bio}</p>
                     </div>
                 ))}
             </div>
