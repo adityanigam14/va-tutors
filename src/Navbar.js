@@ -29,8 +29,8 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/feedback">
-            Feedback
+          <Link to="/classroom">
+            Classroom
           </Link>
         </li>
       </ul>

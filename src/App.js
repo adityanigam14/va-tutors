@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Team from "./pages/Team";
 import Partners from "./pages/Partners";
 import Feedback from "./pages/Feedback";
+import Classroom from "./pages/Classroom";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/classroom" element={<Classroom />} />
         </Routes>
       </div>
       <Footer />
